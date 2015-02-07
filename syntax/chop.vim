@@ -14,6 +14,9 @@ syn match chBindingOp    '=>'
 syn match chBindingOp    '->'
 syn match chBindingOp    ':='
 
+syn region chBinding     start='\<[a-zA-Z\-_][a-zA-Z0-9\-_]*[a-zA-Z0-9\-_]\{-}\>' end=':=' contains=chSymbol,chBindingOp oneline
+syn match chSymbol       '\<[a-zA-Z\-_][a-zA-Z0-9\-_]*[a-zA-Z0-9\-_]\{-}\>' contained
+
 syn match chComment      '#.\{-}$'
 syn region chComment     start='#=' end='=#'
 
@@ -25,5 +28,6 @@ hi def link chNumber     Number
 hi def link chConst      Constant
 hi def link chComment    Comment
 hi def link chBindingOp  SpecialChar
+hi def link chSymbol     Identifier
 
 let b:current_syntax = 'chop'
