@@ -23,7 +23,7 @@ syn region chComment     start='#=' end='=#'
 syn match chNumber       '\<\-\=[0-9]\+\(\.[0-9]*\)\=\>'
 syn keyword chConst      True False Null
 
-syn region chString      start='"' skip='\\"' end='"' oneline
+syn region chString      start='"' skip='\\"' end='"'
 syn region chInfix       start='`' end='`' oneline
 
 hi def link chKeyword    Statement
