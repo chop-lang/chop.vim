@@ -7,6 +7,10 @@ endif
 " TODO: insert definitions here
 
 syn keyword chKeyword    module uses exports match with cond where
+syn match chKeyword      '\\'
+syn match chKeyword      '=>'
+syn match chKeyword      '->'
+syn match chKeyword      ':='
 
 syn match chComment      '#.\{-}$'
 syn region chComment     start='#=' end='=#'
