@@ -4,8 +4,6 @@ if exists('b:current_syntax')
     finish
 endif
 
-" TODO: insert definitions here
-
 syn keyword chKeyword    module uses exports match with cond where when quote
 syn match chKeyword      '\\'
 
