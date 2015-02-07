@@ -6,7 +6,7 @@ endif
 
 " TODO: insert definitions here
 
-syn keyword chKeyword    module uses exports match with cond where
+syn keyword chKeyword    module uses exports match with cond where when
 syn match chKeyword      '\\'
 syn match chKeyword      '=>'
 syn match chKeyword      '->'
