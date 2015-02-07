@@ -4,6 +4,9 @@ if exists('b:current_syntax')
     finish
 endif
 
+" should this be in another file?
+setlocal iskeyword+=39
+
 syn keyword chKeyword    module uses exports match with cond where when quote
 syn match chKeyword      '\\'
 
