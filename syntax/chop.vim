@@ -8,21 +8,22 @@ endif
 
 syn keyword chKeyword    module uses exports match with cond where when
 syn match chKeyword      '\\'
-syn match chKeyword      '=>'
-syn match chKeyword      '->'
-syn match chKeyword      ':='
+
+" tentatively named 'binding operators'
+syn match chBindingOp    '=>'
+syn match chBindingOp    '->'
+syn match chBindingOp    ':='
 
 syn match chComment      '#.\{-}$'
 syn region chComment     start='#=' end='=#'
 
-syn match chNumber       '\<0\>'
-syn match chNumber       '\<-\{-}[1-9]\d*\>'
-syn match chNumber       '\<-\{-}\d\+\.\d\+\>'
+syn match chNumber       '\<\-\{-}[0-9]\+\(\.[0-9]*\)\{-}\>'
 syn keyword chConst      True False Null
 
 hi def link chKeyword    Statement
 hi def link chNumber     Number
 hi def link chConst      Constant
 hi def link chComment    Comment
+hi def link chBindingOp  SpecialChar
 
 let b:current_syntax = 'chop'
