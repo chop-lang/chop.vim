@@ -20,7 +20,7 @@ syn match chSymbol       '\<[a-zA-Z\-_][a-zA-Z0-9\-_]*[a-zA-Z0-9\-_]\{-}\>' cont
 syn match chComment      '#.\{-}$'
 syn region chComment     start='#=' end='=#'
 
-syn match chNumber       '\<\-\{-}[0-9]\+\(\.[0-9]*\)\{-}\>'
+syn match chNumber       '\<\-\=[0-9]\+\(\.[0-9]*\)\=\>'
 syn keyword chConst      True False Null
 
 hi def link chKeyword    Statement
