@@ -14,7 +14,7 @@ syn match chBindingOp    '=>'
 syn match chBindingOp    '->'
 syn match chBindingOp    ':='
 
-syn region chBinding     start='\<[a-zA-Z\-_][a-zA-Z0-9\-_]*[a-zA-Z0-9\-_]\{-}\>' end=':=' contains=chSymbol,chBindingOp oneline
+syn match chBinding      '\<[a-zA-Z\-_][a-zA-Z0-9\-_]*[a-zA-Z0-9\-_]\{-}\> *:=' contains=chSymbol,chBindingOp
 syn match chSymbol       '\<[a-zA-Z\-_][a-zA-Z0-9\-_]*[a-zA-Z0-9\-_]\{-}\>' contained
 
 syn match chComment      '#.\{-}$'
