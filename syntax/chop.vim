@@ -37,7 +37,7 @@ hi def link chConst      Constant
 hi def link chComment    Comment
 hi def link chBindingOp  Special
 hi def link chQuoteOp    Special
-hi def link chPointFree  Special
+hi def link chPointFree  Identifier
 hi def link chSymbol     Identifier
 hi def link chString     String
 hi def link chInfix      Function
