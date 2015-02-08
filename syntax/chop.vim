@@ -24,7 +24,7 @@ syn match chComment      '#.\{-}$'
 syn region chComment     start='#=' end='=#'
 
 syn match chNumber       '\<\-\=[0-9]\+\(\.[0-9]*\)\=\>'
-syn keyword chConst      True False Null
+syn keyword chConst      True False Null _
 
 syn region chString      start='"' skip='\\"' end='"'
 syn region chInfix       start='`' end='`' oneline
