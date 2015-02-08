@@ -17,7 +17,7 @@ syn match chQuoteOp      +'+
 syn match chBinding      '\<[a-zA-Z\-_][a-zA-Z0-9\-_]*[a-zA-Z0-9\-_]\{-}\> *:=' contains=chSymbol,chBindingOp
 syn match chSymbol       '\<[a-zA-Z\-_][a-zA-Z0-9\-_]*[a-zA-Z0-9\-_]\{-}\>' contained
 
-syn region chModuleStmt  start='module' end='\.\_s\=' contains=chModuleKwd,chBindingOp
+syn region chModuleStmt  start='module' end='\.\_s\@=' contains=chModuleKwd,chBindingOp
 syn keyword chModuleKwd  module uses exports extends contained
 
 syn match chComment      '#.\{-}$'
