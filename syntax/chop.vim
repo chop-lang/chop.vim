@@ -4,10 +4,7 @@ if exists('b:current_syntax')
     finish
 endif
 
-" should this be in another file?
-setlocal iskeyword+=39
-
-syn keyword chKeyword    module uses exports match with cond where when quote
+syn keyword chKeyword    module match with cond where when quote
 syn match chKeyword      '\\'
 
 " tentatively named 'binding operators'
@@ -17,6 +14,9 @@ syn match chBindingOp    ':='
 
 syn match chBinding      '\<[a-zA-Z\-_][a-zA-Z0-9\-_]*[a-zA-Z0-9\-_]\{-}\> *:=' contains=chSymbol,chBindingOp
 syn match chSymbol       '\<[a-zA-Z\-_][a-zA-Z0-9\-_]*[a-zA-Z0-9\-_]\{-}\>' contained
+
+syn region chModuleStmt  start='module' end='\.\([^a-zA-Z\-_]\)\@=' contains=chModuleKwd,chBindingOp
+syn keyword chModuleKwd  module uses exports extends contained
 
 syn match chComment      '#.\{-}$'
 syn region chComment     start='#=' end='=#'
@@ -28,6 +28,7 @@ syn region chString      start='"' skip='\\"' end='"'
 syn region chInfix       start='`' end='`' oneline
 
 hi def link chKeyword    Statement
+hi def link chModuleKwd  Statement
 hi def link chNumber     Number
 hi def link chConst      Constant
 hi def link chComment    Comment
