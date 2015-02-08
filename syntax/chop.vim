@@ -13,6 +13,7 @@ syn match chBindingOp    '->'
 syn match chBindingOp    ':='
 
 syn match chQuoteOp      +'+
+syn match chPointFree    '<>'
 
 syn match chBinding      '\<[a-zA-Z\-_][a-zA-Z0-9\-_]*[a-zA-Z0-9\-_]\{-}\> *:=' contains=chSymbol,chBindingOp
 syn match chSymbol       '\<[a-zA-Z\-_][a-zA-Z0-9\-_]*[a-zA-Z0-9\-_]\{-}\>' contained
@@ -36,6 +37,7 @@ hi def link chConst      Constant
 hi def link chComment    Comment
 hi def link chBindingOp  Special
 hi def link chQuoteOp    Special
+hi def link chPointFree  Special
 hi def link chSymbol     Identifier
 hi def link chString     String
 hi def link chInfix      Function
