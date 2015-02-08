@@ -4,7 +4,7 @@ if exists('b:current_syntax')
     finish
 endif
 
-syn keyword chKeyword    module match with cond where when quote
+syn keyword chKeyword    match with cond where when quote
 syn match chKeyword      '\\'
 
 " tentatively named 'binding operators'
